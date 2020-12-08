@@ -4,15 +4,18 @@ public class Principal
 	public static void main(String[] args)
 	{
 		Scanner scanner = new Scanner(System.in);
+
 		long dreAluno;
-		float mediaAluno;
-		float sumNotasTurmas = 0;
+		float notaAluno;	// Media do aluno em determinada disciplina
+
 		float maiorNota = 0;
 		long dreMaiorNota = 0;
+		
+		float sumNotasTurmas = 0;
 		int qntNotasProcessadas = 0;
 	
 		System.out.println("Entre com um DRE e uma média, separados por espaço");
-		String linha = new String("1");
+		String linha;
 		boolean chave=true;
 		while (chave)
 		{
@@ -24,13 +27,13 @@ public class Principal
 			}
 			String[] linhaArray = linha.split(" ");
 			dreAluno = Long.valueOf(linhaArray[0]);		
-			mediaAluno = Float.valueOf(linhaArray[1]);
+			notaAluno = Float.valueOf(linhaArray[1]);
 			
-			sumNotasTurmas += mediaAluno;
+			sumNotasTurmas += notaAluno;
 			
-			if(maiorNota < mediaAluno)
+			if(maiorNota < notaAluno)
 			{
-				maiorNota = mediaAluno;
+				maiorNota = notaAluno;
 				dreMaiorNota = dreAluno;
 			}
 			qntNotasProcessadas++;
