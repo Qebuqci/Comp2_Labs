@@ -58,10 +58,10 @@ public class ContaCorrente {
 
 	 }
 	else if(valor < 0)
-	    {
+	{
 		// Lançar uma exceção alertando a tentativa de transferência com valor negativo
 		System.out.println("Tentativa negativa de transferência");
-	    }
+	}
 	else
 	{
 	    // Lançar uma exceção alertando que a conta não tem saldo
