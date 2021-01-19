@@ -1,0 +1,72 @@
+[ Olhando os resultados: qual o melhor sorteador? ]
+R: O dado Triplo é melhor sorteador do que o dado de Gamão, já que o jogador 2 
+ganhou mais vezes.
+
+[ Você saberia dizer isso antes de rodar o programa? ]
+R: Talvez. Eu poderia arriscar e dizer que as chances do jogador 1 ganhar
+são muito baixas por dois motivos : ele tem menos casos de vitória e também
+a probabilidade desses casos acontecerem é muito baixa.
+
+O 1º motivo : Os casos de vitória do jogador 1 ocorrem quando os lançamentos 
+do dado de gamão caem como iguais e com valores de 5 ou 6. 
+Pois teremos como resultado final, (4*5 =) 20 e (4*6 =) 24, respectivamente.
+Enquanto que o jogador 2 nunca poderá obter um resultado maior do que 18 
+(6 + 6 + 6 - que é a soma de três lançamentos iguais a 6). Dando assim, sempre
+a vitória para 1, nesses casos.
+
+Logo, o número de casos a favor do jogador 1 é menor, que a quantidade de casos
+existentes, por rodada. Logo, suas chances são baixas.
+
+O 2º motivo : Além dos casos serem poucos, as chances do computador sortear
+dois números iguais é muito baixa. O computador gera números "aleatórios"
+através de uma fórmula, que determina uma sequência dado um valor inicial.
+
+Para um dado valor x_i, o valor x_i+1 é determinado de acordo
+com uma fórmula aplicada a x_i. De forma que a aleatoriedade é fictícia, já
+que existe uma sequência determinada para cada chamada do random.
+
+[ x_i, x_i+1, x_i+2, x_i+3, x_i+4, ..., x_i+n ]
+x_i+1 = F(x_i)
+x_i+2 = F(x_i+1)
+
+Eu me arrisco a dizer que é muito dificil sair dois números iguais, ou seja,
+que nessa sequência haja x_i+k = x_i+j para algum k e j.
+
+E além disso, mesmo quando há dois números iguais, a solução de vitória para o
+jogador 1 é extremamente particular. Não basta sair qualquer número igual, tem
+que sair 5 ou 6. Portanto, as chances do jogador 1 ganhar são muito baixas.
+
+[ É verdade que jogos com um número maior de rodadas tornam mais difícil a 
+vitória ir para o jogador mais fraco? ]
+
+Sim e essa relação entre a probabilidade da vitória do jogo por um jogador e
+o número de rodadas é exponencial.
+
+Para um jogador ganhar o jogo, ele deve vencer mais rodadas do que o outro.
+Chamemos a probabilidade de vitória por rodada, de P1 e P2, respectivamente para
+o jogador 1 e o jogador 2.
+
+Para uma rodada (R=1),
+Probabilidade_Vitoria_1 = P1 (probabilidade de vitoria do jogador 1 numa rodada)
+Probabilidade_Vitoria_2 = P2 (probabilidade de vitoria do jogador 2 numa rodada)
+
+Para duas rodadas (R=2),
+o jogador 1, precisa para ganhar, vencer a primeira E a segunda rodada. 
+A mesma coisa o segundo. Precisa vencer a primeira E a segunda rodada. Logo,
+Probabilidade_Vitoria_1 = P1.P1
+Probabilidade_Vitoria_2 = P2.P2
+
+Para n rodadas,
+Probabilidade_Vitoria_1 = P1.P1.P1 ... P1 (n vezes) = P1^n
+Probabilidade_Vitoria_2 = P2.P2.P2 ... P2 (n vezes) = P2^n
+
+Mas como eu argumentei na ultima pergunta, P1 < P2. Logo, P1^n << P2^n
+Como exemplo:
+2 < 5. Eleva ambos a 3
+2^3 < 5^3   ---- >  8 < 125 --- > 8 << 125
+
+Ou seja, a probabilidade do jogador 1 ganhar o jogo, com n rodadas até aumenta. 
+Mas fica MUITO MENOR do que a probabilidade do jogador 2 ganhar.
+Sendo assim, o maior número de rodadas favorece o jogador mais forte, que é o 2,
+o que possui, os dados triplos.
+
