@@ -61,12 +61,11 @@ Probabilidade_Vitoria_1 = P1.P1.P1 ... P1 (n vezes) = P1^n
 Probabilidade_Vitoria_2 = P2.P2.P2 ... P2 (n vezes) = P2^n
 
 Mas como eu argumentei na ultima pergunta, P1 < P2. Logo, P1^n << P2^n
-Como exemplo:
-2 < 5. Eleva ambos a 3
-2^3 < 5^3   ---- >  8 < 125 --- > 8 << 125
+Como exemplo, digamos que:
+P1 = 0.3 , P2 = 0.7
+P1 < P2 
+0.3 < 0.7. Eleva ambos a 5 
+0.3^5 < 0.7^5   ---- >  0.0025 < 0.343 --- > 0.0025 << 0.343
 
-Ou seja, a probabilidade do jogador 1 ganhar o jogo, com n rodadas até aumenta. 
-Mas fica MUITO MENOR do que a probabilidade do jogador 2 ganhar.
-Sendo assim, o maior número de rodadas favorece o jogador mais forte, que é o 2,
-o que possui, os dados triplos.
+Sendo assim, o maior número de rodadas favorece o jogador mais forte.
 
