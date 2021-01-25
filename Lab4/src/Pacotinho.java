@@ -14,7 +14,7 @@ public class Pacotinho extends ArrayList<Figurinha> {
     }
 
     // sobrecarga no costrutor, passando aqui as posições desejadas
-    public Pacotinho(Album album, int[] posicoes) {
+    public Pacotinho(Album album, int[] posicoes) throws RuntimeException{
         this.album = album;
 
         // verificar se o tamanho do array está correto;
