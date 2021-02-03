@@ -89,7 +89,7 @@ public class MapaTest {
         assertEquals("Qualquer Coisa Modificada", mapa.get(1234L));
     }
 
-    /**
+    
     @Test
     public void testarPerformance() {
         rodarTesteDePerformance(mapaUsandoArrayUnico);
@@ -97,8 +97,7 @@ public class MapaTest {
         rodarTesteDePerformance(mapaUsandoDoisArraysParalelos);
         rodarTesteDePerformance(hashMap);
     }
-    **/
-    
+        
     private void rodarTesteDePerformance(Map<Long, String> mapa) {
         System.out.println("\nRodando teste de performance para a classe " +
                 mapa.getClass().getName() + "...");
