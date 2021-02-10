@@ -69,6 +69,12 @@ public class Loja {
 		if (usuario.getEndereco() == null) {
 		    throw new EnderecoInvalidoException();
 		}
+
+		 float precoTotal = quantidade * item.getPrecoEmReais();
+
+		 if (!processarPagamento(precoTotal)) {
+		     throw new ErroNoPagamentoException();
+		 }
 	}
 	
 	catch(Exception e)
@@ -77,12 +83,7 @@ public class Loja {
 	     return recibo;
 	 }
 	
-        float precoTotal = quantidade * item.getPrecoEmReais();
-
-        if (!processarPagamento(precoTotal)) {
-            throw new ErroNoPagamentoException();
-        }
-
+       
         if (item instanceof Transportavel) {  // é transportável?
             // cria um array com todos os itens que precisarão ser entregues
             // (possivelmente várias unidades do mesmo item)
